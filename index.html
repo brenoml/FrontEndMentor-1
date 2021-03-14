@@ -5,31 +5,179 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <!-- <link href="https://fonts.google.com/specimen/Kumbh+Sans" rel="stylesheet"> -->
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Profile card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+   <style>
+    body {
+      font-family: 'Kumbh Sans', sans-serif;  
+      font-size: 13px;      
+      background-color: hsl(185, 75%, 39%);   
+      overflow-x: hidden; 
+    }
+
+    h1,h2,h3,h4,h5 {
+      text-align: center;
+    }
+
+    h3,h4,h5 {
+      margin: 10px auto 25px auto;
+      font-weight: 400;
+      color: hsl(0, 0%, 40%);
+    }
+
+    h1,h2 {      
+      margin: 25px auto auto auto;
+      font-weight: 700;
+      color: hsl(229, 23%, 23%);
+    }
+
+    hr{
+      height: 1px;
+      background-color: #ddd;
+      border: none;
+    }
+
+    .box {
+      width: 400px;
+      height: 400px;
+      border-radius: 15px;
+      margin: auto;
+      position: absolute;
+      top: 0; 
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      z-index: 1;
+    }
+
+    .box-top {
+      background-image: url("./images/bg-pattern-card.svg");
+
+      height: 150px;    
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .img {
+      border-radius: 50%;
+      display: block;
+      margin: -50px auto auto auto;
+      border: #FFF solid 4px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .box-flex {
+      display: flex;
+    }
+
+    .box-column {
+	    flex-direction: row;
+      margin: auto;
+    }
+
+    .text-info {
+      margin: 15px 3px auto 3px;      
+      display: inline-block;
+    }
+
+    .box-info {
+      margin: 0px;
+      display: initial;
+    }
+
+    .box-main {
+      width: 300px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .margin-top {
+      margin-top: 10px;
+    }
+
+    .circle-top {
+      width: 55%;
+      height: 55%;
+      position: relative;
+      transform: translate(-10%,-40%);
+    }   
+
+    .circle-bottom {
+      width: 55%;
+      height: 55%;
+      position: relative;
+      transform: translate(90%,-50%);
+      overflow: hidden;
+    }
+
+    @media only screen and (max-width: 450px) {   
+      
+      .box {
+      width: 90%;
+      height: 400px;
+      border-radius: 15px;
+      margin: auto;
+      position: absolute;
+      top: 0; 
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: white;
+      z-index: 1; 
+      }  
+
+      .circle-top {
+        width: 75%;
+        height: 400px;
+        position: relative;
+      }    
+
+      .circle-bottom {
+        width: 75%;
+        height: 400px;
+        position: relative;
+        transform: translate(180px,-10px);
+      }         
+    }
+
   </style>
 </head>
 <body>
-  Victor Crest
-  26
-  London
-
-  80K
-  Followers
-
-  803K
-  Likes
-
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+  <img class="circle-top" src="./images/bg-pattern-top.svg">
+  <div class="box">  
+    <div class="box-top"></div>
+    <img class="img" src="./images/image-victor.jpg">
+    <div class="box-main">
+      <div class="box-info">
+        <h2 class="text-info">Victor Crest</h2>
+      </div>
+      <div class="box-info">
+        <h4 class="text-info">26</h4>    
+      </div>
+    </div>
+    <h4 class="margin-top">London</h4>
+    <hr/>
+    <div class="box-flex">
+      <div class="box-column">        
+        <h2>80K</h2>
+        <h4>Followers</h4>
+      </div>
+      <div class="box-column">
+        <h2>803K</h2>
+        <h4>Likes</h4>
+      </div>
+      <div class="box-column">
+        <h2>1.4K</h2>
+        <h4>Photos</h4>
+      </div>
+    </div>
   </div>
+ <img class="circle-bottom" src="./images/bg-pattern-bottom.svg"> 
 </body>
 </html>
